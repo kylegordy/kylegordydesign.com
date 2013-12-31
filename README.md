@@ -1,4 +1,4 @@
 kylegordydesign.com
 ===================
 
-kylegordy.github.io
+The future home of kylegordydesign.com.
