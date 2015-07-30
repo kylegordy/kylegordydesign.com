@@ -1,3 +1,9 @@
+# Site settings
 name: Kyle Gordy
-markdown: redcarpet
-pygments: true
+email: kyle@kylegordydesign.com
+description: "Passionate Designer & Front-end Developer with a love for learning and all things technology."
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlights: false
