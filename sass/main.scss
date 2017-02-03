@@ -1,10 +1,3 @@
-//////////
-// Imports
-//////////
-
-@import "normalize";
-@import "additional-defaults";
-
 /////////////
 // Variables
 /////////////
@@ -13,6 +6,13 @@ $orange: #FF5C00;
 $black: #292929;
 $medium-bp: 640px;
 $large-bp: 1020px;
+
+//////////
+// Imports
+//////////
+
+@import "normalize";
+@import "additional-defaults";
 
 //////////////////
 // Highlight Color
@@ -70,12 +70,12 @@ h1 {
 a {
   text-decoration: none;
   color: $orange;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -2px; // offset border
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px; // offset border
   transition: .25s border-color ease-in-out;
 }
 
-a:hover { border-bottom: 2px solid $orange; }
+a:hover { border-bottom: 1px solid $orange; }
 
 /////////
 // Layout
@@ -166,7 +166,7 @@ main section {
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .icon__svg {
