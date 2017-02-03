@@ -1,10 +1,6 @@
 {
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "css-mqpacker": "^4.0.0",
-    "csswring": "^4.0.0",
-    "gulp": "^3.9.0",
-    "gulp-postcss": "^6.0.1",
-    "lost": "^6.6.2"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
   }
 }
