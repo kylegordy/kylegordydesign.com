@@ -1,0 +1,69 @@
+// Sticky Footer Logic
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.site-nav,
+.site-footer {
+    flex: none;
+}
+
+// end logic
+
+.site-footer {
+    border-top: 2px solid $gray-light;
+}
+
+.site-footer__container {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: $medium-bp){
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 150px;
+    }
+}
+
+.site-footer__nav {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-top: -2px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.icon__svg {
+    fill: $black;
+    transition: .25s all ease-in-out;
+    vertical-align: middle;
+}
+
+.icon:hover .icon__svg {
+    fill: $orange;
+}
+
+.site-footer__email {
+    margin-left: 10px;
+}
+
+.site-footer__copyright {
+    color: $gray-dark;
+}

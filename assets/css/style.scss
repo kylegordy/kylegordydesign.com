@@ -1,0 +1,26 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+// Color Variables
+////////////////////
+
+$orange: #FF5C00;
+$black: #292929;
+$gray-dark: #5F5F5F;
+$gray-light: #F7F7F7;
+
+$max-width: 1440px; // 1340 + 100 (for margins)
+$medium-bp: 640px;
+$large-bp: 1020px;
+
+
+// Imports
+////////////////////
+
+@import "normalize";
+@import "additional-defaults";
+@import "helper-classes";
+@import "typography";
+@import "site-nav";
+@import "site-footer";
