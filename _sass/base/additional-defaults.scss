@@ -24,4 +24,5 @@ a {
 }
 
 // Highlight Color
-::selection { background: $orange; color: #fff; text-shadow: none; }
+::selection { background: $black; color: #fff; text-shadow: none; }
+::-moz-selection { background: $black; color: #fff; text-shadow: none; }

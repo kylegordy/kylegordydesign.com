@@ -4,7 +4,7 @@
   <body>
     {% include header.html %}
 
-    <main class="container" role="main">
+    <main {% if page.body-class %} class="{{ page.body-class }} container" {% else %} class="container"{% endif %} role="main">
         {{ content }}
     </main>
 

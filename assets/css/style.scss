@@ -10,17 +10,22 @@ $black: #292929;
 $gray-dark: #5F5F5F;
 $gray-light: #F7F7F7;
 
-$max-width: 1440px; // 1340 + 100 (for margins)
-$medium-bp: 640px;
-$large-bp: 1020px;
+$max-width: 1440px; // 1340 + 100 (for outside 50px margins)
 
+$bp-a: 480px;
+$bp-m: 640px;
+$bp-l: 1020px;
+$bp-xl: 1440px;
 
 // Imports
 ////////////////////
 
-@import "normalize";
-@import "additional-defaults";
-@import "helper-classes";
-@import "typography";
-@import "site-nav";
-@import "site-footer";
+@import "base/normalize";
+@import "base/additional-defaults";
+@import "base/helper-classes";
+@import "base/typography";
+
+@import "component/site-nav";
+@import "component/site-footer";
+
+@import "layout/work";

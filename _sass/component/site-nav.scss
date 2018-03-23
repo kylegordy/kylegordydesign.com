@@ -4,9 +4,9 @@
     background-color: #fff;
     padding-top: 20px;
     height: 66px;
-    margin-bottom: 40px !important;
+    margin-bottom: 30px !important;
 
-  @media screen and (min-width: $medium-bp){
+  @media screen and (min-width: $bp-m){
       padding-top: 46px;
       height: 86px;
   }
@@ -19,7 +19,7 @@
     line-height: 22px;
     margin-right: 14px;
 
-    @media screen and (min-width: $medium-bp){
+    @media screen and (min-width: $bp-m){
         margin-right: 30px;
     }
 }
@@ -54,7 +54,7 @@
         border-bottom: none;
     }
 
-    @media screen and (min-width: $medium-bp){
+    @media screen and (min-width: $bp-m){
         padding: 8px;
     }
 }

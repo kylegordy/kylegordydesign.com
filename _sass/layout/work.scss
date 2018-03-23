@@ -1,0 +1,37 @@
+
+.work h1 {
+    margin: 0 0 95px 0;
+    max-width: 350px;
+
+    @media screen and (min-width: $bp-m){
+        max-width: 550px;
+    }
+
+    @media screen and (min-width: $bp-l){
+        max-width: 750px;
+        margin: 45px 0 95px 0;
+    }
+
+}
+
+
+.work-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 50px -10px;
+    max-width: 900px;
+}
+
+.work-grid__item {
+    display: block;
+    height: 300px;
+    flex: 1 1 420px;
+    margin: 10px;
+    background-color: #fff;
+    border: 2px solid $gray-light;
+    transition: .25s all ease-in-out;
+}
+
+.work-grid__item:hover {
+    border: 10px solid $orange;
+}
