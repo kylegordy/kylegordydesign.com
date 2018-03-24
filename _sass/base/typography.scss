@@ -9,9 +9,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Headings
+////////////////////
+
 h1, h2, h3, h4, h5, h6 {
   @extend .sans-serif;
   font-weight: 600;
+  margin: 0 0 .5em 0;
 }
 
 h1 {
@@ -20,9 +24,14 @@ h1 {
   letter-spacing: -1px;
   margin: 0;
 
+  @media screen and (min-width: $bp-s){
+    font-size: 38px;
+    line-height: 44px;
+  }
+
   @media screen and (min-width: $bp-m){
     font-size: 48px;
-    line-height: 58px;
+    line-height: 56px;
   }
 
   @media screen and (min-width: $bp-l){
@@ -32,11 +41,17 @@ h1 {
 
 }
 
+// Paragraph
+////////////////////
+
 p {
     line-height: 26px;
     color: $gray-dark;
     margin: 0 0 12px 0;
 }
+
+// Links
+////////////////////
 
 a {
   color: $orange;
@@ -47,4 +62,11 @@ a {
   transition-property: color, border-color;
 }
 
-a:hover { border-bottom: 1px solid $orange; }
+a:hover { border-color: $orange; }
+
+// List
+////////////////////
+
+ul, ol {
+    color: $gray-dark;
+}

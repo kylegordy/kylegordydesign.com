@@ -1,19 +1,18 @@
+// Work Headline
+////////////////////
 
 .work h1 {
-    margin: 0 0 95px 0;
-    max-width: 350px;
+    margin: 0 0 1.4em 0;
+    max-width: 11em;
 
-    @media screen and (min-width: $bp-m){
-        max-width: 550px;
-    }
-
-    @media screen and (min-width: $bp-l){
-        max-width: 750px;
-        margin: 45px 0 95px 0;
+    @media screen and (min-width: $bp-s){
+        margin-top: .7em;
     }
 
 }
 
+// Work Section
+////////////////////
 
 .work-grid {
     display: flex;
@@ -23,15 +22,137 @@
 }
 
 .work-grid__item {
+    position: relative;
     display: block;
-    height: 300px;
-    flex: 1 1 420px;
+    height: 20%;
+    flex: 1 1 220px;
     margin: 10px;
     background-color: #fff;
     border: 2px solid $gray-light;
-    transition: .25s all ease-in-out;
+    transition: .4s all ease-in-out;
+    overflow: hidden;
+    max-height: 300px;
+    outline: none;
+
+    @media screen and (min-width: $bp-s){
+        flex: 1 1 250px;
+    }
+
+    @media screen and (min-width: $bp-m){
+        flex: 1 1 300px;
+    }
+
 }
 
-.work-grid__item:hover {
-    border: 10px solid $orange;
+.work-grid__item:hover,
+.work-grid__item:focus {
+    border: 8px solid $orange;
+}
+
+.work-grid__img {
+    width: 100%;
+}
+
+// hover number
+
+.work-grid__number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    letter-spacing: -0.15px;
+    text-align: center;
+    background-color: $orange;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all ease-in;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    z-index: 2;
+}
+
+.work-grid__item:hover .work-grid__number,
+.work-grid__item:focus .work-grid__number {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+// hover overlay
+
+.work-grid__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.95);
+    z-index: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s all ease-in-out;
+}
+
+.work-grid__item:hover .work-grid__overlay,
+.work-grid__item:focus .work-grid__overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.grid__overlay-title {
+    color: $black;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+    margin: 0;
+    transition: .4s margin ease-in-out;
+}
+
+.grid__overlay-tags {
+    margin: 0;
+    transition: .4s margin ease-in-out;
+}
+
+.grid__overlay-title,
+.grid__overlay-tags  {
+    margin-left: -10px;
+}
+
+.work-grid__item:hover .grid__overlay-title,
+.work-grid__item:focus .grid__overlay-title,
+.work-grid__item:hover .grid__overlay-tags,
+.work-grid__item:focus .grid__overlay-tags   {
+    margin-left: 0;
+}
+
+// Experience Section
+////////////////////
+
+.experience__grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 730px;
+    margin: 0 -10px 10px -10px;
+}
+
+.experience__h2 {
+    margin-bottom: 20px;
+}
+
+.experience__ul {
+    flex: 1 0 266px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.experience__ul .bold {
+    margin-bottom: 2px;
 }

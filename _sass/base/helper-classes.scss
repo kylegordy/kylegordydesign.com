@@ -6,6 +6,11 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+.bold {
+    color: $black;
+    font-weight: 600;
+}
+
 .no-border {
   border-bottom: none !important;
 }
@@ -24,6 +29,13 @@
     }
 }
 
+.list--plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
 .container {
     width: 100%;
     max-width: $max-width;
@@ -32,6 +44,11 @@
     padding-right: 16px;
 
     @media screen and (min-width: $bp-m){
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media screen and (min-width: $bp-l){
         padding-left: 50px;
         padding-right: 50px;
     }
