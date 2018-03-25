@@ -31,12 +31,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 10px;
 
-    @media screen and (min-width: $bp-m){
+    @media screen and (min-width: $bp-s){
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         height: 150px;
+        padding-top: 0px;
     }
 }
 
@@ -57,14 +59,23 @@ main {
     vertical-align: middle;
 }
 
-.icon:hover .icon__svg {
+.icon:hover .icon__svg,
+.icon:focus .icon__svg  {
     fill: $orange;
 }
 
 .site-footer__email {
     margin-left: 10px;
+    line-height: 1.4;
 }
 
 .site-footer__copyright {
     color: $gray-dark;
+    margin-top: 10px;
+    font-size: 13px;
+
+    @media screen and (min-width: $bp-s){
+        margin: 0;
+        font-size: inherit;
+    }
 }

@@ -1,3 +1,35 @@
+// Fonts
+////////////////////
+
+@font-face {
+    font-family: 'Tofino';
+    src: url('../fonts/Tofino-Regular.woff2') format('woff2'),
+         url('../fonts/Tofino-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tofino';
+    src: url('../fonts/Tofino-Semibold.woff2') format('woff2'),
+         url('../fonts/Tofino-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+.serif {
+  font-family: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+}
+
+.sans-serif {
+  font-family: 'Tofino', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+// Body
+////////////////////
+
 body {
   @extend .serif;
   -webkit-text-size-adjust: 100%;
@@ -21,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 32px;
   line-height: 38px;
-  letter-spacing: -1px;
   margin: 0;
 
   @media screen and (min-width: $bp-s){
@@ -57,7 +88,6 @@ a {
   color: $orange;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  padding-bottom: 2px; // offset border
   transition: .25s all ease-in-out;
   transition-property: color, border-color;
 }
