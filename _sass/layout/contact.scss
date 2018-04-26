@@ -1,0 +1,36 @@
+// Contact Page
+////////////////////
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 550px;
+    align-content: stretch;
+}
+
+.contact-body {
+    max-width: 500px;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form__form {
+    max-width: 488px;
+    margin: auto;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.contact-angle {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    right: 0;
+    // background-color: pink;
+    background: url("../img/angles/contact-angle.svg") no-repeat right bottom;
+    background-size: contain;
+    z-index: -1;
+}

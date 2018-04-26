@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<section class="contact-body">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+</section>
+
+<section class="contact-form">
+
+    <form class="contact-form__form" action="https://formspree.io/kyle@kgordy.com" method="POST">
+        <label class="visuallyhidden" for="name">name</label>
+        <input type="text" name="name" placeholder="name" required>
+
+        <label class="visuallyhidden" for="_replyto">email</label>
+        <input type="email" name="_replyto" placeholder="email" required>
+
+        <label class="visuallyhidden" for="_subject">interest</label>
+        <select name="_subject" required>
+            <option class="placeholder" value="" selected disabled hidden>interest</option>
+            <option value="I need help with a project">I need help with a project</option>
+            <option value="I just want to talk">I just want to talk</option>
+            <option value="I like turtles">I like turtles</option>
+        </select>
+
+        <label class="visuallyhidden" for="message">message</label>
+        <textarea name="message" placeholder="message"></textarea>
+
+        <button class="btn" type="submit">send message</button>
+
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="hidden" name="_format" value="plain" />
+        <input type="hidden" name="_next" value="{{ site.baseurl }}/contact/thanks" />
+
+    </form>
+
+</section>
+
+<div class="contact-angle"></div>

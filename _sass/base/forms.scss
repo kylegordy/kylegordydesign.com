@@ -1,0 +1,74 @@
+// Forms
+////////////////////
+
+// define placehoder text
+::placeholder,
+select:invalid,
+select option[value=""] {
+    @extend .sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: $gray-dark;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='password'],
+textarea,
+select {
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 8px 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: $gray-dark;
+    background-color: #fff;
+    border-radius: 0px;
+    border: 2px solid $gray-light;
+    box-shadow: none;
+    transition: border-color .25s ease-in-out;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    // active and focus styles
+    &:active,
+    &:focus {
+        border-color: $orange;
+        outline: none;
+    }
+
+    &:valid {
+    }
+
+}
+
+// Hack: removes outline from select elements in Firefox
+// https://stackoverflow.com/questions/3773430/remove-outline-from-select-box-in-ff/18853002#18853002
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+// for IE only - removes default select arrow styles
+select::-ms-expand {
+    display: none;
+}
+
+// textarea styles
+textarea {
+    width: 100%;
+    min-height: 146px; // 3x the height of an input
+    resize: vertical;
+}
+
+// select styles
+select {
+    padding-right: 48px;
+    background: url("../img/global/select-triangle.svg") no-repeat right 20px center;
+}

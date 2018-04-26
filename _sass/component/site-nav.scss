@@ -1,7 +1,10 @@
 .site-nav {
+    background-color: #fff;
+}
+
+.site-nav__container {
     display: flex;
     align-items: baseline;
-    background-color: #fff;
     padding-top: 20px;
     height: 66px;
     margin-bottom: 30px !important;
@@ -17,9 +20,10 @@
     font-size: 20px;
     line-height: 22px;
     margin-right: 14px;
+    letter-spacing: -0.1px;
 
     @media screen and (min-width: $bp-m){
-        margin-right: 30px;
+        margin-right: 36px;
     }
 }
 
@@ -54,6 +58,6 @@
     }
 
     @media screen and (min-width: $bp-m){
-        padding: 8px;
+        padding: 10px;
     }
 }
