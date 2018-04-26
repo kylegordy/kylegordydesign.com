@@ -26,11 +26,18 @@
 
 .contact-angle {
     position: absolute;
-    width: 65%;
+    width: 64%;
     height: 100%;
     right: 0;
     // background-color: pink;
     background: url("../img/angles/contact-angle.svg") no-repeat right bottom;
     background-size: contain;
     z-index: -1;
+}
+
+// this is used on the message sent page
+
+.thanks-gif {
+    width: 50%;
+    border: 24px solid #fff;
 }
