@@ -6,7 +6,6 @@
     justify-content: space-between;
     align-items: center;
     min-height: 550px;
-    align-content: stretch;
 }
 
 .contact-body {
@@ -33,6 +32,10 @@
     background: url("../img/angles/contact-angle.svg") no-repeat right bottom;
     background-size: contain;
     z-index: -1;
+}
+
+.contact + .site-footer {
+    margin-top: 20px;
 }
 
 // this is used on the message sent page

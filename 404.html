@@ -1,24 +1,16 @@
 ---
-layout: default
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<!doctype html>
+<html lang="en" class="no-js">
+  {% include head.html %}
+  <body class="four-oh-four">
 
-<div class="container">
-  <h1>404</h1>
+    <div class="four-oh-four__body" role="main">
+        <h1>Nope, don't’ like that!</h1>
+        <p>Sorry, the page you’re looking for is missing or does not exist.</p>
+        <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">take me home</a>
+    </div>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  </body>
+</html>
