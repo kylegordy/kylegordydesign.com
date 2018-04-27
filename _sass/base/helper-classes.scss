@@ -1,3 +1,50 @@
+.container {
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media screen and (min-width: $bp-s){
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media screen and (min-width: $bp-l){
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.bold {
+    color: $black;
+    font-weight: 600;
+}
+
+.no-border {
+  border-bottom: none !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.list--inline {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        display: inline;
+    }
+}
+
+.list--plain {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 // Hide visually and from screen readers
 
 .hidden {
@@ -31,52 +78,4 @@
     position: static;
     width: auto;
     white-space: inherit;
-}
-
-.bold {
-    color: $black;
-    font-weight: 600;
-}
-
-.no-border {
-  border-bottom: none !important;
-}
-
-.no-margin {
-    margin: 0 !important;
-}
-
-.list--inline {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    > li {
-        display: inline;
-    }
-}
-
-.list--plain {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-
-.container {
-    width: 100%;
-    max-width: $max-width;
-    margin: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-
-    @media screen and (min-width: $bp-m){
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    @media screen and (min-width: $bp-l){
-        padding-left: 50px;
-        padding-right: 50px;
-    }
 }

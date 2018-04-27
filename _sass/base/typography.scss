@@ -32,13 +32,18 @@
 
 body {
   @extend .serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.7;
   color: $black;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (min-width: $bp-s){
+    font-size: 15px;
+  }
+
 }
 
 // Headings
@@ -79,15 +84,10 @@ p {
     line-height: 26px;
     color: $gray-dark;
     margin: 0 0 12px 0;
+}
 
-    &:last-of-type {
-        margin-bottom: 15px;
-
-        @media screen and (min-width: $bp-s){
-            margin-bottom: 20px;
-        }
-
-    }
+p + .btn {
+    margin-top: 4px;
 }
 
 // Stong

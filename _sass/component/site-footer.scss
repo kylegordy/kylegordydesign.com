@@ -70,7 +70,8 @@ main {
 
 .site-footer__copyright {
     color: $gray-dark;
-    margin-top: 10px;
+    opacity: .5;
+    margin: 10px 0 0 0;
     font-size: 13px;
 
     @media screen and (min-width: $bp-s){

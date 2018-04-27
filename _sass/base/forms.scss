@@ -6,7 +6,6 @@
 select:invalid,
 select option[value=""] {
     @extend .sans-serif;
-    font-size: 15px;
     font-weight: 600;
     color: $gray-dark;
 }
@@ -22,8 +21,7 @@ textarea,
 select {
     height: 48px;
     margin-bottom: 10px;
-    padding: 8px 20px;
-    font-size: 15px;
+    padding: 0 14px;
     line-height: 1.7;
     color: $gray-dark;
     background-color: #fff;
@@ -35,6 +33,10 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    @media screen and (min-width: $bp-s){
+        padding: 0 20px;
+    }
 
     // active and focus styles
     &:active,
@@ -62,6 +64,7 @@ select::-ms-expand {
 
 // textarea styles
 textarea {
+    padding-top: 8px;
     width: 100%;
     min-height: 146px; // 3x the height of an input
     resize: vertical;
@@ -70,5 +73,10 @@ textarea {
 // select styles
 select {
     padding-right: 48px;
-    background: url("../img/global/select-triangle.svg") no-repeat right 20px center;
+    background: url("../img/global/select-triangle.svg") no-repeat right 14px center;
+
+    @media screen and (min-width: $bp-s){
+        background-position: right 20px center;
+    }
+
 }
