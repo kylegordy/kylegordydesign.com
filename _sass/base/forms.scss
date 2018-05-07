@@ -9,6 +9,7 @@ select option[value=""] {
     font-weight: 600;
     color: $gray-dark;
     text-transform: lowercase;
+    opacity: 1;
 }
 
 input[type='text'],
