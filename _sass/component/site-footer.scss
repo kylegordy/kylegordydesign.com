@@ -26,13 +26,13 @@ main {
 }
 
 .site-footer__container {
-    height: 140px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-top: 10px;
 
-    @media screen and (min-width: $bp-s){
+    @media screen and (min-width: $bp-m){
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
