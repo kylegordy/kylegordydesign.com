@@ -1,16 +1,14 @@
 .site-nav {
-    background-color: #fff;
+    // background-color: #fff;
 }
 
 .site-nav__container {
     display: flex;
-    align-items: baseline;
-    padding-top: 20px;
-    height: 66px;
+    align-items: center;
+    height: 80px;
 
   @media screen and (min-width: $bp-m){
-      padding-top: 46px;
-      height: 86px;
+      height: 110px;
   }
 
 }

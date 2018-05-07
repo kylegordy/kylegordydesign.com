@@ -8,6 +8,7 @@ select option[value=""] {
     @extend .sans-serif;
     font-weight: 600;
     color: $gray-dark;
+    text-transform: lowercase;
 }
 
 input[type='text'],

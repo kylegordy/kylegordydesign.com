@@ -157,28 +157,3 @@
 .work-grid__item:focus .work-grid__overlay-tags   {
     margin-left: 0;
 }
-
-// Experience Section
-////////////////////
-
-.experience__grid {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 730px;
-    margin: 0 -10px 10px -10px;
-}
-
-.experience__h2 {
-    margin-bottom: 20px;
-}
-
-.experience__ul {
-    flex: 1 0 266px;
-    margin: 0 10px;
-    margin-bottom: 20px;
-}
-
-.experience__ul .bold {
-    @extend .sans-serif;
-    font-size: 16px;
-}

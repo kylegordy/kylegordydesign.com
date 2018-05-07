@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="about-hero">
+
+    <div class="about-hero__img"></div>
+
+    <section class="about-hero__body">
+        <h2>{{ page.headline }}</h2>
+        {{ content }}
+        <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">Let's Talk</a>
+    </section>
+
+</div>
+
+{% include experience-list.html %}

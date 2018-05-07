@@ -51,3 +51,29 @@ input[type="button"] {
     }
 
 }
+
+.btn--secondary {
+    background-color: $black;
+
+    &:after {
+        width: 10px;
+        height: 8px;
+        border-width: 8px 5px 0 5px;
+        border-color: #fff transparent transparent transparent;
+    }
+
+    &:hover:after ,
+    &:focus:after {
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: darken( $black, 4% );
+    }
+
+    &:active {
+        background-color: darken( $black, 8% );
+    }
+}

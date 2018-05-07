@@ -100,41 +100,4 @@ body-class: work
 
 </div>
 
-<section class="experience">
-    <h2 class="experience__h2">Experience</h2>
-
-    <div class="experience__grid">
-        <ul class="experience__ul list--plain">
-            <li class="bold">Freelance</li>
-            <li>UI Designer & Front-end Developer</li>
-            <li> April 2018 – Present</li>
-        </ul>
-
-        <ul class="experience__ul list--plain">
-            <li class="bold">Simple Focus</li>
-            <li>UI Designer & Front-end Developer</li>
-            <li>November 2015 – April 2018</li>
-        </ul>
-
-        <ul class="experience__ul list--plain">
-            <li class="bold">Anonyome Labs, Inc. (Sudo App)</li>
-            <li>Product Designer </li>
-            <li>August 2016 – February 2017</li>
-        </ul>
-
-        <ul class="experience__ul list--plain">
-            <li class="bold">Chattanooga Public Library</li>
-            <li>Developer & Designer</li>
-            <li>April 2014 – November 2015</li>
-        </ul>
-
-        <ul class="experience__ul list--plain">
-            <li class="bold">Fillauer Companies, Inc.</li>
-            <li>Developer & Designer</li>
-            <li>May 2011 – April 2014</li>
-        </ul>
-    </div>
-
-    <a class="btn" href="{{ site.baseurl }}{% link about.md %}">More about me</a>
-
-</section>
+{% include experience-list.html %}

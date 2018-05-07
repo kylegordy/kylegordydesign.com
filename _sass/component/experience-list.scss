@@ -1,0 +1,83 @@
+// Experience List
+////////////////////
+
+.experience {
+    position: relative;
+
+    &:before {
+        content: "Experience";
+        position: absolute;
+        left: 40px;
+        right: 0;
+        bottom: 0;
+        height: 104px;
+        overflow: hidden;
+        z-index: -1;
+        @extend .sans-serif;
+        font-size: 160px;
+        font-weight: 600;
+        line-height: 1;
+        color: $gray-light;
+    }
+
+}
+
+.experience__grid {
+    display: flex;
+    align-items: center;
+    padding: 50px 50px 110px 50px;
+    border: 2px solid $gray-light;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        width: 50px;
+        background-image: linear-gradient(-90deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        right: 2px;
+        width: 50px;
+        background-image: linear-gradient(90deg, rgba(255,255,255,0.00) 0%, #FFFFFF 100%);
+        z-index: 2;
+    }
+
+}
+
+.experience__h1 {
+    position: absolute;
+    left: 40px;
+    bottom: -38%;
+    display: block;
+    font-size: 160px;
+    line-height: 1;
+    color: $gray-light;
+}
+
+.experience__ul {
+    flex: 1 0 auto;
+    padding-right: 48px;
+    font-size: 14px;
+}
+
+.experience__ul .bold {
+    @extend .sans-serif;
+    font-size: 16px;
+}
+
+.experience__btn {
+    position: absolute;
+    right: 50px;
+    bottom: -24px;
+}

@@ -1,0 +1,41 @@
+// Contact Page
+////////////////////
+
+.about-hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 736px;
+    margin-bottom: 60px;
+    // border: 1px solid red;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 110px;
+        right: 0;
+        width: 60%;
+        height: 736px;
+        background: url("../img/angles/about-angle.svg") no-repeat right bottom;
+        background-size: cover;
+        z-index: -1;
+    }
+
+}
+
+.about-hero__img {
+    min-width: 50%;
+    max-height: 670px;
+    background-color: $gray-light;
+    background: url("../img/global/kylegordy-lr.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.about-hero__body {
+    align-self: center;
+    max-width: 636px;
+    padding: 50px;
+    margin-left: -65px;
+    background-color: #fff;
+    // border: 1px solid red;
+}

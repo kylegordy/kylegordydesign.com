@@ -3,31 +3,31 @@ layout: default
 ---
 
 <section class="contact-body">
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.headline }}</h1>
     {{ content }}
 </section>
 
 <section class="contact-form">
 
     <form class="contact-form__form" action="https://formspree.io/kyle@kgordy.com" method="POST">
-        <label class="visuallyhidden" for="name">name</label>
-        <input type="text" name="name" placeholder="name" required>
+        <label class="visuallyhidden" for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Name" required>
 
-        <label class="visuallyhidden" for="_replyto">email</label>
-        <input type="email" name="_replyto" placeholder="email" required>
+        <label class="visuallyhidden" for="_replyto">Email</label>
+        <input id="_replyto" type="email" name="_replyto" placeholder="Email" required>
 
-        <label class="visuallyhidden" for="_subject">interest</label>
-        <select name="_subject" required>
-            <option class="placeholder" value="" selected disabled hidden>interest</option>
+        <label class="visuallyhidden" for="_subject">Interest</label>
+        <select id="_subject" name="_subject" required>
+            <option class="placeholder" value="" selected disabled hidden>Interest</option>
             <option value="I need help with a project">I need help with a project</option>
             <option value="I just want to talk">I just want to talk</option>
             <option value="I like turtles">I like turtles</option>
         </select>
 
-        <label class="visuallyhidden" for="message">message</label>
-        <textarea name="message" placeholder="message"></textarea>
+        <label class="visuallyhidden" for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Message"></textarea>
 
-        <button class="btn" type="submit">send message</button>
+        <button class="btn" type="submit">Send Message</button>
 
         <input type="text" name="_gotcha" style="display:none" />
         <input type="hidden" name="_format" value="plain" />
@@ -35,5 +35,3 @@ layout: default
     </form>
 
 </section>
-
-<div class="contact-angle"></div>

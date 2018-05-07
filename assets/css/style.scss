@@ -5,7 +5,7 @@
 // Color Variables
 ////////////////////
 
-$orange: #FF5500;
+$orange: #F05000;
 $black: #292929;
 $gray-dark: #5F5F5F; // 75% $black
 $gray-light: #F2F2F2; // 6% $black
@@ -29,7 +29,9 @@ $bp-xl: 1440px;
 
 @import "component/site-nav";
 @import "component/site-footer";
+@import "component/experience-list";
 
 @import "layout/work";
+@import "layout/about";
 @import "layout/contact";
 @import "layout/404";

@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="961px" height="627px" viewBox="0 0 961 627" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>contact-angle</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Contact" transform="translate(-479.000000, -273.000000)" fill="#F4F4F4">
-            <polygon id="contact-angle" points="629.095641 470.502865 1440 273.050781 1440 900 479.601562 900"></polygon>
-        </g>
-    </g>
-</svg>
+<svg width="961" height="627" xmlns="http://www.w3.org/2000/svg"><path d="M150.096 197.503L961 .05V627H.602z" fill="#F4F4F4" fill-rule="evenodd"/></svg>
