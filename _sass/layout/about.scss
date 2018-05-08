@@ -2,14 +2,13 @@
 ////////////////////
 
 .about-hero {
-    position: relative;
+    position: relative; // mobile only to contain background angle
     display: flex;
     flex-direction: column;
     margin-left: -$cp-s;
     margin-right: -$cp-s;
     margin-bottom: 40px;
     padding-bottom: 40px;
-    // border: 1px solid red;
 
     @media screen and (min-width: $bp-s) {
         margin-left: -$cp-m;
@@ -17,13 +16,14 @@
     }
 
     @media screen and (min-width: $bp-m) {
-        position: inherit;
+        position: inherit; // reset postion relative
         flex-direction: row;
         justify-content: flex-start;
-        height: 736px;
+        min-height: 600px;
+        max-height: 850px; // fallback for vmin
+        height: 80vmin;
         padding-bottom: 60px;
         margin-bottom: 60px;
-        // border: 1px solid red;
     }
 
     @media screen and (min-width: $bp-xl) {
@@ -41,16 +41,22 @@
     width: 100%;
 
     @media screen and (min-width: $bp-s) {
-        width: 60%;
+        min-height: 500px;
+        width: 80%;
     }
 
     @media screen and (min-width: $bp-m) {
+        min-height: 100%;
         height: 100%;
-        width: 100%;
+        width: 50%;
     }
 
     @media screen and (min-width: $bp-l) {
-        width: 40%;
+        max-width: 50%;
+    }
+
+    @media screen and (min-width: $bp-l + 200) {
+        max-width: 45%;
     }
 
 }
@@ -61,22 +67,23 @@
     padding: 16px;
     background-color: #fff;
     margin-top: -40px;
-    // border: 1px solid red;
     z-index: 2;
 
     @media screen and (min-width: $bp-s) {
-        align-self: flex-end;
+        width: auto;
+        margin-left: 40px;
+        margin-right: 40px;
         padding: 24px;
     }
 
     @media screen and (min-width: $bp-m) {
+        width: 50%;
         align-self: flex-end;
         padding: 30px;
-        margin: 0 0 60px -60px;
+        margin: 0 60px 60px -60px;
     }
 
     @media screen and (min-width: $bp-l) {
-        margin-left: -60px;
         padding: 60px;
         max-width: 636px;
     }
@@ -89,15 +96,21 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60%;
-    height: 100%;
+    width: 80vw;
+    height: 40vh;
     background: url("../img/angles/about-angle.svg") no-repeat right bottom;
     background-size: cover;
     z-index: -1;
 
+    @media screen and (min-width: $bp-s) {
+        height: 100%;
+    }
+
     @media screen and (min-width: $bp-m) {
         top: $nav-height-l;
-        height: 736px;
+        min-height: 600px;
+        max-height: 850px; // fallback for vmin
+        height: 80vmin;
         width: 70%;
     }
 
