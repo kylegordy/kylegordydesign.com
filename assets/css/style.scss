@@ -15,7 +15,17 @@ $max-width: 1440px; // 1340 + 100 (for outside 50px margins)
 $bp-s: 600px;
 $bp-m: 800px;
 $bp-l: 1020px;
-$bp-xl: 1440px;
+$bp-xl: $max-width;
+
+$nav-height-s: 80px;
+$nav-height-l: 110px;
+
+$footer-height-s: 100px;
+$footer-height-l: 150px;
+
+$cp-s: 16px;
+$cp-m: 3.5vw;
+$cp-l: 50px;
 
 // Imports
 ////////////////////

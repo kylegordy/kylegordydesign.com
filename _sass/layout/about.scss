@@ -2,40 +2,103 @@
 ////////////////////
 
 .about-hero {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    height: 736px;
-    margin-bottom: 60px;
+    flex-direction: column;
+    margin-left: -$cp-s;
+    margin-right: -$cp-s;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
     // border: 1px solid red;
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 110px;
-        right: 0;
-        width: 60%;
+    @media screen and (min-width: $bp-s) {
+        margin-left: -$cp-m;
+        margin-right: -$cp-m;
+    }
+
+    @media screen and (min-width: $bp-m) {
+        position: inherit;
+        flex-direction: row;
+        justify-content: flex-start;
         height: 736px;
-        background: url("../img/angles/about-angle.svg") no-repeat right bottom;
-        background-size: cover;
-        z-index: -1;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        // border: 1px solid red;
+    }
+
+    @media screen and (min-width: $bp-xl) {
+        margin-left: 0;
+        margin-right: 0;
     }
 
 }
 
 .about-hero__img {
-    min-width: 50%;
-    max-height: 670px;
-    background-color: $gray-light;
-    background: url("../img/global/kylegordy-lr.jpg") no-repeat top center;
+    background: url("../img/global/kylegordy-lr.jpg") no-repeat center;
     background-size: cover;
+    height: 60vh;
+    min-height: 300px;
+    width: 100%;
+
+    @media screen and (min-width: $bp-s) {
+        width: 60%;
+    }
+
+    @media screen and (min-width: $bp-m) {
+        height: 100%;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $bp-l) {
+        width: 40%;
+    }
+
 }
 
 .about-hero__body {
-    align-self: center;
-    max-width: 636px;
-    padding: 50px;
-    margin-left: -65px;
+    width: 100%;
+    width: calc(100vw - 40px);
+    padding: 16px;
     background-color: #fff;
+    margin-top: -40px;
     // border: 1px solid red;
+    z-index: 2;
+
+    @media screen and (min-width: $bp-s) {
+        align-self: flex-end;
+        padding: 24px;
+    }
+
+    @media screen and (min-width: $bp-m) {
+        align-self: flex-end;
+        padding: 30px;
+        margin: 0 0 60px -60px;
+    }
+
+    @media screen and (min-width: $bp-l) {
+        margin-left: -60px;
+        padding: 60px;
+        max-width: 636px;
+    }
+}
+
+// Background angle
+
+.about-hero:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: url("../img/angles/about-angle.svg") no-repeat right bottom;
+    background-size: cover;
+    z-index: -1;
+
+    @media screen and (min-width: $bp-m) {
+        top: $nav-height-l;
+        height: 736px;
+        width: 70%;
+    }
+
 }

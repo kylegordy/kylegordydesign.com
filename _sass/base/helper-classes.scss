@@ -2,17 +2,17 @@
     width: 100%;
     max-width: $max-width;
     margin: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: $cp-s;
+    padding-right: $cp-s;
 
     @media screen and (min-width: $bp-s){
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: $cp-m;
+        padding-right: $cp-m;
     }
 
-    @media screen and (min-width: $bp-l){
-        padding-left: 50px;
-        padding-right: 50px;
+    @media screen and (min-width: $bp-xl){
+        padding-left: $cp-l;
+        padding-right: $cp-l;
     }
 }
 

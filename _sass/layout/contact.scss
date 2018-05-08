@@ -70,9 +70,9 @@
 
 .contact-form__form {
     max-width: 450px;
-    margin-left: -16px;
-    margin-right: -16px;
-    padding: 16px;
+    margin-left: -$cp-s;
+    margin-right: -$cp-s;
+    padding: $cp-s;
     background-color: #fff;
 
     @media screen and (min-width: $bp-m){

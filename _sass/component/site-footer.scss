@@ -26,7 +26,7 @@ main {
 }
 
 .site-footer__container {
-    height: 100px;
+    height: $footer-height-s;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +36,7 @@ main {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: 150px;
+        height: $footer-height-l;
         padding-top: 0px;
     }
 }
