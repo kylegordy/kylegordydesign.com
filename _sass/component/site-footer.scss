@@ -20,9 +20,13 @@ main {
 // end logic
 
 .site-footer {
-    margin-top: 80px;
+    margin-top: 60px;
     border-top: 2px solid $gray-light;
     background-color: #fff;
+
+    @media screen and (min-width: $bp-m){
+        margin-top: 80px;
+    }
 }
 
 .site-footer__container {
