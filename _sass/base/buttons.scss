@@ -1,43 +1,38 @@
 .btn,
 button,
 input[type="button"] {
-    display: inline-block;
-    line-height: 15px;
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
     font-weight: 600;
     text-transform: lowercase;
     text-align: left;
-    vertical-align: middle;
     color: #fff;
     text-decoration: none;
     border: none;
-    padding: 16px 50px 17px 20px;
+    padding: 0 50px 0 20px;
     background-color: $orange;
-    transition: all .25s ease;
+    transition: all .4s $ease-in-out-cubic;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     cursor: pointer;
     @extend .sans-serif;
-    position: relative;
 
     &:after {
         content: '';
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-top: 1px;
         width: 8px;
         height: 10px;
         border-style: solid;
         border-width: 5px 0 5px 8px;
         border-color: transparent transparent transparent #fff;
         margin-left: 5px;
-        transition: .3s all ease-in-out;
+        transition: .4s transform $ease-in-out-cubic;
     }
 
     &:hover:after ,
     &:focus:after {
-        margin-left: 10px;
+        transform: translateX(5px);
     }
 
     &:hover,
@@ -64,8 +59,8 @@ input[type="button"] {
 
     &:hover:after ,
     &:focus:after {
-        margin-left: 5px;
-        margin-top: 5px;
+        transform: translateX(0);
+        transform: translateY(4px);
     }
 
     &:hover,
