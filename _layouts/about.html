@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<div class="about-hero">
+<div class="about-hero" data-inview>
 
-    <div class="about-hero__img"></div>
+    <div class="about-hero__img" data-fade="up"></div>
 
-    <section class="about-hero__body">
+    <section class="about-hero__body" data-fade="left" data-inview-delay="1">
         <h2>{{ page.headline }}</h2>
-        {{ content }}
+        <p>{{ content | remove: '<p>' | remove: '</p>' }}</p>
         <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">Let's Talk</a>
     </section>
 

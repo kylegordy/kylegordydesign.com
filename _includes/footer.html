@@ -1,4 +1,4 @@
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer" role="contentinfo" {% if page.url contains "contact" %} data-inview data-fade="up" data-inview-delay="2" {% endif %}>
     <div class="site-footer__container container">
         <nav class="site-footer__nav">
 
@@ -30,4 +30,5 @@
         <!-- <p class="site-footer__copyright sans-serif">©2018 Kyle Gordy. All rights reserved.</p> -->
     </div>
 </footer>
+{% include js.html %}
 {% include ga.html %}

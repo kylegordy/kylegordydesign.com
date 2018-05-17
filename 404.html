@@ -4,13 +4,15 @@
 <!doctype html>
 <html lang="en" class="no-js">
   {% include head.html %}
-  <body class="four-oh-four">
+  <body class="four-oh-four" data-inview>
 
-    <div class="four-oh-four__body" role="main">
+    <div class="four-oh-four__body" role="main" data-fade="up">
         <h1>Nope, don't’ like that!</h1>
         <p>Sorry, the page you’re looking for is missing or does not exist.</p>
         <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">take me home</a>
     </div>
 
+    {% include js.html %}
+    {% include ga.html %}
   </body>
 </html>

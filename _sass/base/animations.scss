@@ -1,0 +1,31 @@
+// Animations
+////////////////////
+
+[data-fade] {
+    opacity: 0;
+    transition: transform .8s $ease-in-out-cubic,
+                opacity .8s $ease-in-out-cubic;
+    will-change: opacity, transform;
+
+    .inview &,
+    &.inview {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+[data-fade="up"] { transform: translate3d(0, 40px, 0); }
+[data-fade="down"] { transform: translate3d(0, -40px, 0); }
+[data-fade="left"] { transform: translate3d(40px, 0, 0); }
+[data-fade="right"] { transform: translate3d(-40px, 0, 0); }
+
+// Delay
+@for $i from 1 through 10 {
+    [data-inview-delay="#{$i}"] {
+        transition-delay: $i*.1s !important;
+    }
+
+    [data-inview-duration="#{$i}"] {
+        transition-duration: $i*.1s !important;
+    }
+}

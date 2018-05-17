@@ -1,31 +1,31 @@
-<section class="experience">
+<section class="experience" data-inview data-fade="up" data-inview-delay="1">
     <div class="experience__grid">
 
-        <ul class="experience__ul list--plain">
+        <ul class="experience__ul list--plain" data-fade data-inview-delay="2">
             <li class="bold">Freelance</li>
             <li>UI Designer & Front-end Developer</li>
             <li>Apr 2018 &ndash; Present</li>
         </ul>
 
-        <ul class="experience__ul list--plain">
+        <ul class="experience__ul list--plain" data-fade data-inview-delay="3">
             <li class="bold">Simple Focus</li>
             <li>UI Designer & Front-end Developer </li>
             <li>Nov 2015 &ndash; Apr 2018</li>
         </ul>
 
-        <ul class="experience__ul list--plain">
+        <ul class="experience__ul list--plain" data-fade data-inview-delay="4">
             <li class="bold">Anonyome Labs, Inc.</li>
             <li>Product Designer</li>
             <li>Aug 2016 &ndash; Feb 2017</li>
         </ul>
 
-        <ul class="experience__ul list--plain">
+        <ul class="experience__ul list--plain" data-fade data-inview-delay="5">
             <li class="bold">Chattanooga Public Library</li>
             <li>Developer & Designer </li>
             <li>Apr 2014 &ndash; Nov 2015</li>
         </ul>
 
-        <ul class="experience__ul list--plain">
+        <ul class="experience__ul list--plain" data-fade data-inview-delay="6">
             <li class="bold">Fillauer Companies, Inc. </li>
             <li>Developer & Designer </li>
             <li>May 2011 &ndash; Apr 2014</li>
@@ -33,8 +33,8 @@
     </div>
 
     {% if page.url == "/" %}
-        <a class="experience__btn btn" href="{{ site.baseurl }}{% link about.md %}">more about me</a>
+        <a class="experience__btn btn" href="{{ site.baseurl }}{% link about.md %}" data-fade="" data-inview-delay="7" data-inview-duration="8">More About Me</a>
     {% else %}
-         <a class="experience__btn btn btn--secondary" href="{{ site.baseurl }}{% link about.md %}">Download Resume</a>
+        <a class="experience__btn btn btn--secondary" href="{{ site.baseurl }}{% link about.md %}" data-fade="" data-inview-delay="7" data-inview-duration="8">Download Resume</a>
     {% endif %}
 </section>

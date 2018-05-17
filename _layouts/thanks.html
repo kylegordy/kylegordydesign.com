@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<section class="contact-body">
+<section class="contact-body" data-inview data-fade="up" data-inview-delay="1">
     <h1>{{ page.title }}</h1>
     {{ content }}
     <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">send another message</a>
 </section>
 
-<img class="thanks-gif" src="{{ site.baseurl }}/assets/img/global/thanks.gif" alt="A scene from the TV show The Office where Jim and Pam air high-five.">
+<img class="thanks-gif" src="{{ site.baseurl }}/assets/img/global/thanks.gif" alt="A scene from the TV show The Office where Jim and Pam air high-five." data-inview data-fade="left">
 
 <div class="contact-angle"></div>

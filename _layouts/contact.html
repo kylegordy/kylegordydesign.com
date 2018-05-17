@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<section class="contact-body">
+<section class="contact-body" data-inview data-fade="up" data-inview-delay="1">
     <h1>{{ page.headline }}</h1>
-    {{ content }}
+    <p>{{ content | remove: '<p>' | remove: '</p>' }}</p>
 </section>
 
-<section class="contact-form">
+<section class="contact-form" data-inview data-fade="left">
 
     <form class="contact-form__form" action="https://formspree.io/kyle@kgordy.com" method="POST">
         <label class="visuallyhidden" for="name">Name</label>
