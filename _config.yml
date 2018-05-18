@@ -33,6 +33,7 @@ exclude:
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-autoprefixer
 
 collections:
   work:
