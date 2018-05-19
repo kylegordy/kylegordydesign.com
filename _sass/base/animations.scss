@@ -1,36 +1,40 @@
 // Animations
 ////////////////////
 
+$animation-distance: 40px;
+$animation-duration: .8s;
+
+@keyframes fade {
+    from { opacity: 0;}
+    to { opacity: 1; transform: translate3d(0, 0, 0);}
+}
+
 [data-fade],
 [data-inview-fade] {
     opacity: 0;
-    transition: transform .8s $ease-in-out-cubic,
-                opacity .8s $ease-in-out-cubic;
     will-change: opacity, transform;
 }
 
-.js [data-fade],
-.inview [data-inview-fade],
-[data-inview-fade].inview {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+[data-fade],
+.inview[data-inview-fade],
+.inview [data-inview-fade] {
+    animation: fade $animation-duration $ease-in-out-cubic forwards;
 }
 
-[data-fade="up"], [data-inview-fade="up"]  { transform: translate3d(0, 40px, 0); }
-[data-fade="down"], [data-inview-fade="down"] { transform: translate3d(0, -40px, 0); }
-[data-fade="left"], [data-inview-fade="left"] { transform: translate3d(40px, 0, 0); }
-[data-fade="right"], [data-inview-fade="right"] { transform: translate3d(-40px, 0, 0); }
+[data-fade="up"], [data-inview-fade="up"]  { transform: translate3d(0, $animation-distance, 0); }
+[data-fade="down"], [data-inview-fade="down"] { transform: translate3d(0, -$animation-distance, 0); }
+[data-fade="left"], [data-inview-fade="left"] { transform: translate3d($animation-distance, 0, 0); }
+[data-fade="right"], [data-inview-fade="right"] { transform: translate3d(-$animation-distance, 0, 0); }
 
 // Transition Modifiers
 ////////////////////
 
 @for $i from 1 through 10 {
     [data-transition-delay="#{$i}"] {
-        transition-delay: $i*.1s !important;
-        animation-delay: $i*.1s !important;
+        transition-delay: $i*.1s;
+        animation-delay: $i*.1s;
     }
-
     [data-transition-duration="#{$i}"] {
-        transition-duration: $i*.1s !important;
+        transition-duration: $i*.1s;
     }
 }

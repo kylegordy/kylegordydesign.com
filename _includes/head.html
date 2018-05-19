@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}?=V2.0">
     <noscript>
         <style type="text/css">
-            [data-inview-fade],
-            [data-fade] {
-                opacity: 1 !important;
-                transform: translate(0) scale(1) !important;
+            [data-inview-fade] {
+                animation: fade .8s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
             }
         </style>
     </noscript>

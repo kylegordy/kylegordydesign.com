@@ -71,6 +71,7 @@
     width: 100%;
     height: 72%;
     z-index: -1;
+    @extend [data-fade];
 
     @media screen and (min-width: $bp-s){
         height: 60%;

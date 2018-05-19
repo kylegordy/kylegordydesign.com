@@ -101,6 +101,7 @@
     background: url("../img/angles/about-angle.svg") no-repeat right bottom;
     background-size: cover;
     z-index: -1;
+    @extend [data-inview-fade];
 
     @media screen and (min-width: $bp-s) {
         height: 100%;
