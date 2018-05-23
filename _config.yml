@@ -31,6 +31,13 @@ exclude:
   - Gemfile.lock
   - node_modules
 
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  blanklines: false
+
 plugins:
   - jekyll-redirect-from
   - jekyll-autoprefixer
