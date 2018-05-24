@@ -31,10 +31,9 @@ $animation-duration: .8s;
 
 @for $i from 1 through 10 {
     [data-transition-delay="#{$i}"] {
-        transition-delay: $i*.1s;
-        animation-delay: $i*.1s;
+        animation-delay: $i*.1s !important;
     }
     [data-transition-duration="#{$i}"] {
-        transition-duration: $i*.1s;
+        animation-duration: $i*.1s !important;
     }
 }
