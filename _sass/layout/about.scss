@@ -34,21 +34,42 @@
 }
 
 .about-hero__img {
-    background: url("../img/global/kylegordy-lr.jpg") no-repeat center;
-    background-size: cover;
+    background: url("../img/global/kylegordy-400.jpg") no-repeat center / cover;
     height: 60vh;
     min-height: 300px;
     width: 100%;
 
+    @media only screen and ( min-device-pixel-ratio: 1.25),
+           only screen and ( min-resolution: 200dpi),
+           only screen and ( min-resolution: 1.25dppx) {
+        background: url("../img/global/kylegordy-800.jpg") no-repeat center / cover;
+    }
+
     @media screen and (min-width: $bp-s) {
+        background: url("../img/global/kylegordy-600.jpg") no-repeat center / cover;
         min-height: 500px;
         width: 80%;
+
+        @media only screen and ( min-device-pixel-ratio: 1.25),
+               only screen and ( min-resolution: 200dpi),
+               only screen and ( min-resolution: 1.25dppx) {
+            background: url("../img/global/kylegordy-800.jpg") no-repeat center / cover;
+        }
+
     }
 
     @media screen and (min-width: $bp-m) {
+        background: url("../img/global/kylegordy-800.jpg") no-repeat center / cover;
         min-height: 100%;
         height: 100%;
         width: 50%;
+
+        @media only screen and ( min-device-pixel-ratio: 1.25),
+               only screen and ( min-resolution: 200dpi),
+               only screen and ( min-resolution: 1.25dppx) {
+            background: url("../img/global/kylegordy-1200.jpg") no-repeat center / cover;
+        }
+
     }
 
     @media screen and (min-width: $bp-l) {
