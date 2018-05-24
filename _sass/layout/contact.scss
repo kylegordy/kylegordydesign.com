@@ -66,8 +66,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    background: url("../img/angles/contact-angle.svg") no-repeat right bottom;
-    background-size: cover;
+    background: url("../img/angles/contact-angle.svg") no-repeat right bottom / cover;
     width: 100%;
     height: 72%;
     z-index: -1;
@@ -96,6 +95,7 @@
 // this is used on the message sent page
 
 .thanks-gif {
+    box-sizing: content-box; // for html5 video
     order: -1;
     width: 100%;
     margin-bottom: 20px;
@@ -105,7 +105,6 @@
         width: 50%;
         margin: 0;
         border: 20px solid #fff;
-        margin-bottom: 0;
     }
 
 }
