@@ -6,8 +6,13 @@
   {% include head.html %}
   <body class="four-oh-four">
 
+  <video class="four-oh-four__video" autoplay loop muted playsinline>
+    <source src="{{ site.baseurl }}/assets/img/gifs/nope.mp4" type="video/mp4">
+    <!--[if lt IE 9]><img src="{{ site.baseurl }}/assets/img/gifs/nope.gif" alt="A scene from the TV show The Office where Michael Scott says - Nope, don't like that!"><![endif]-->
+  </video>
+
     <div class="four-oh-four__body" role="main" data-inview data-inview-fade="up">
-        <h1>Nope, don't’ like that!</h1>
+        <h1>Nope, don't like that!</h1>
         <p>Sorry, the page you’re looking for is missing or does not exist.</p>
         <a href="{{ site.baseurl }}/" class="btn">take me home</a>
     </div>

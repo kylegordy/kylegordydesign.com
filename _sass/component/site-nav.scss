@@ -16,11 +16,11 @@
 .site-nav__logo {
     font-size: 20px;
     line-height: 22px;
-    margin-right: 14px;
+    margin-right: 6vw;
     letter-spacing: -0.1px;
 
     @media screen and (min-width: $bp-m){
-        margin-right: 36px;
+        margin-right: 2vw;
     }
 }
 
@@ -46,7 +46,7 @@
 .site-nav__li a {
     color: $gray-dark;
     border-bottom: none;
-    padding: 4px;
+    padding: 2vw;
 
     &:hover,
     &:active,
@@ -55,7 +55,7 @@
         border-bottom: none;
     }
 
-    @media screen and (min-width: $bp-m){
+    @media screen and (min-width: $bp-s){
         padding: 10px;
     }
 }

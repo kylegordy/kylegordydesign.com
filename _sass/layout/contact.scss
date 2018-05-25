@@ -17,10 +17,11 @@
 
 .contact-body {
     max-width: 450px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     @media screen and (min-width: $bp-m){
-        margin-bottom: 0;
+        margin: 0;
         padding-right: 25px;
     }
 
@@ -32,7 +33,7 @@
 }
 
 .contact-form {
-    margin: -10px 0 30px 0;
+    margin: -10px 0 50px 0;
 
     @media screen and (min-width: $bp-m){
         margin: 0;
@@ -98,7 +99,7 @@
     box-sizing: content-box; // for html5 video
     order: -1;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
 
     @media screen and (min-width: $bp-m){
         order: 1;

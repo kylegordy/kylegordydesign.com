@@ -58,8 +58,7 @@
         position: absolute;
         top: 2px;
         bottom: 2px;
-        z-index: 0;
-
+        z-index: 1;
     }
 
     &:before {
@@ -110,4 +109,5 @@
     position: absolute;
     right: 40px;
     bottom: -24px;
+    z-index: 2;
 }
