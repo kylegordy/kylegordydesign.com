@@ -1,5 +1,26 @@
-kylegordy.github.io
-===================
+This is the source code for my [personal website](http://kgordy.com). It's built with [Jekyll](http://jekyllrb.com) and hosted here using [Github Pages](https://pages.github.com). 
 
-The future home of my new website.  
-I will be developing this publicly, so expect to see lots of changes and bugs…
+## Core Dependencies
+
+* [Bundler](https://bundler.io/)
+* [Node.js](https://nodejs.org)
+
+## Installation
+
+### Have bundler resolve the Ruby dependencies
+
+~~~ sh
+$ bundle install
+~~~
+
+### Have NPM resolve the Node.js dependencies
+
+~~~ sh
+$ npm install
+~~~
+
+### Run Gulp to build the website
+
+~~~ sh
+$ gulp
+~~~
