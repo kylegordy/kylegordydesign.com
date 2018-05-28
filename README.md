@@ -7,19 +7,19 @@ This is the source code for my [personal website](http://kgordy.com). It's built
 
 ## Installation
 
-### Have bundler resolve the Ruby dependencies
+#### Have Bundler resolve the Ruby dependencies.
 
 ~~~ sh
 $ bundle install
 ~~~
 
-### Have NPM resolve the Node.js dependencies
+#### Have NPM resolve the Node.js dependencies.
 
 ~~~ sh
 $ npm install
 ~~~
 
-### Run Gulp to build the website
+#### Run Gulp to build the website.
 
 ~~~ sh
 $ gulp
