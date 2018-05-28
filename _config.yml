@@ -30,6 +30,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - package.json
+  - gulpfile.js
 
 compress_html:
   clippings: all
@@ -40,16 +42,11 @@ compress_html:
 
 plugins:
   - jekyll-redirect-from
-  - jekyll-autoprefixer
 
 collections:
   work:
     output: true
     permalink: /work/:path/
-
-sass:
-  sass_dir: _sass
-  style: compressed
 
   # Links to include in header/footer
 navigation:
