@@ -5,38 +5,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 120px;
+    min-height: 130px;
     height: 25vmin;
 }
 
 .work-intro__title {
-    max-width: 11em;
+    max-width: 15em;
     margin-bottom: 1em;
+
+    @media screen and (max-width: $bp-l){
+        font-size: 6.1vw;
+    }
+
 }
 
 // Work Grid
 ////////////////////
 
 .work-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
     max-width: 900px;
-    margin: 0 -10px 50px -10px;
+    margin: 0 0 50px 0;
+
+    @media screen and (min-width: 550px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 .work-grid__card {
     position: relative;
     display: block;
-    height: 20%;
-    flex: 1 1 250px;
-    margin: 10px;
     border: none;
     outline: none;
-
-    @media screen and (min-width: $bp-m){
-        flex: 1 1 300px;
-    }
-
 }
 
 .card__img {
