@@ -21,11 +21,11 @@ input[type='url'],
 input[type='password'],
 textarea,
 select {
-    height: 48px;
+    height: 46px;
     margin-bottom: 10px;
-    padding: 0 14px;
+    padding: 0 18px; // same padding as buttons minus 2px for border
     line-height: 1.7;
-    color: $gray-dark;
+    color: $black;
     background-color: #fff;
     border-radius: 0px;
     border: 2px solid $gray-light;
@@ -35,10 +35,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
-    @media screen and (min-width: $bp-s){
-        padding: 0 20px;
-    }
 
     // active and focus styles
     &:active,
@@ -68,17 +64,12 @@ select::-ms-expand {
 textarea {
     padding-top: 8px;
     width: 100%;
-    min-height: 146px; // 3x the height of an input
+    min-height: 138px; // 3x the height of an input
     resize: vertical;
 }
 
 // select styles
 select {
     padding-right: 48px;
-    background: url("../img/global/select-triangle.svg") no-repeat right 14px center;
-
-    @media screen and (min-width: $bp-s){
-        background-position: right 20px center;
-    }
-
+    background: url("../img/global/select-triangle.svg") no-repeat right 18px center;
 }
