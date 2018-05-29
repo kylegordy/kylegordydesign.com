@@ -4,6 +4,7 @@
 .experience {
     position: relative;
     margin-right: -$cp-s; // negative margin to make right side "bleed"
+    background-color: #fff;
 
     @media screen and (min-width: $bp-s) {
         margin-right: -$cp-m;
