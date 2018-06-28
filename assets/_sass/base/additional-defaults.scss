@@ -17,9 +17,6 @@ img {
     box-sizing: border-box;
 }
 
-// Makes images responsive
-img { max-width: 100%; height: auto; -ms-interpolation-mode:bicubic }
-
 // Remove tap highlight on mobile
 a {
   -webkit-tap-highlight-color: $black;

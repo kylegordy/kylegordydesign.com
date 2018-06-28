@@ -1,0 +1,125 @@
+// Hero
+////////////////////
+
+.project-hero-wrapper {
+    position: relative; // to contain background angle
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw; // break outside container
+    margin-right: -50vw; // example https://codepen.io/kjbrum/pen/aEKvbE
+}
+
+.project-hero {
+    @extend .container; // to get container max width and padding
+    display: flex;
+    flex-direction: column-reverse; // flip hero to top
+    padding-bottom: 30px;
+
+    @media screen and (min-width: $bp-m) {
+        flex-direction: row;
+        align-items: center; // align center
+        height: 600px;
+        padding-bottom: 60px;
+    }
+
+    @media screen and (min-width: $bp-l) {
+        height: 80vh;
+        min-height: 650px;
+        max-height: 800px;
+    }
+
+}
+
+.project-hero__header {
+    flex: 1 1 auto;
+    max-width: 520px;
+    margin-right: 40px;
+}
+
+.project-hero__img {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $bp-m) {
+        justify-content: flex-end;
+        max-width: none;
+        width: 50%;
+        height: 100%;
+        margin-right: -60px;
+    }
+
+}
+
+.project-hero__img img {
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid $gray-light;
+    border-radius: 4px 4px 0 0;
+}
+
+// Mobile hero overrides
+
+.project-hero.mobile-hero {
+
+    .project-hero__img {
+        justify-content: center; // center img
+        max-width: 100%; // reset max width
+        height: 450px; // set max height
+
+        @media screen and (min-width: $bp-m) {
+            height: 500px;
+        }
+
+        @media screen and (min-width: $bp-l) {
+            height: 100%; // reset max height
+        }
+    }
+
+    .project-hero__img img {
+        border: none; // remove border image and radius
+        border-radius: 0;
+    }
+
+}
+
+// Hero angle
+
+.project-hero:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 900px;
+    height: 366px;
+    background: url("../img/angles/project-hero-angle.svg") bottom right no-repeat;
+    @extend [data-inview-fade];
+    // @extend [data-inview-fade="left"];
+    // @extend [data-transition-delay="2"];
+    z-index: -1;
+
+    @media screen and (min-width: $bp-xl) {
+        width: 64%;
+        height: 100%;
+        background-size: contain;
+    }
+
+}
+
+// Intro Block
+////////////////////
+
+.project-intro {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+
+.project-intro__body {
+    max-width: 500px;
+}

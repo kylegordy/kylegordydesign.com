@@ -4,7 +4,7 @@
 $orange: #F05000;
 $black: #292929;
 $gray-dark: #5F5F5F; // 75% $black
-$gray-light: #F2F2F2; // 6% $black
+$gray-light: #F4F4F4; // 5% $black
 
 $max-width: 1440px; // 1340 + 100 (for outside 50px margins)
 
@@ -41,6 +41,7 @@ $ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 @import "component/experience-list";
 
 @import "layout/work";
+@import "layout/project";
 @import "layout/about";
 @import "layout/contact";
 @import "layout/404";

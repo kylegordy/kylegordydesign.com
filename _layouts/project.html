@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="project-hero-wrapper" data-inview>
+    <div {% if page.mobile-hero == true  %} class="project-hero mobile-hero" {% else %} class="project-hero" {% endif %}>
+
+        <header class="project-hero__header" data-inview-fade="up" data-transition-delay="1">
+            <h1>{{ page.title | escape }}</h1>
+            {{ content }}
+        </header>
+
+        <div class="project-hero__img" data-inview-fade="left">
+            <img srcset="{{ site.baseurl }}/assets/img/project/{{ page.hero-img }},
+                         {{ site.baseurl }}/assets/img/project/{{ page.hero-img | replace:'.','@2x.' }} 2x"
+                    src="{{ site.baseurl }}/assets/img/project/{{ page.hero-img }}" alt="{{ page.hero-alt-txt }}">
+        </div>
+
+    </div>
+</div>
+<!--
+
+<section class="project-intro">
+
+    <div class="project-intro__body">
+        <h3>Building a Friendly Urology Website</h3>
+        <p>The Conrad Pearson Clinic needed a new website. Besides being easy to use, they didn't have design direction in mind for the site. To start narrowing in on one, I designed three homepage "caricatures" for them to react to. Each design had a visual theme. They ranged from overly "techy" to photo heavy and approachable.</p>
+        <p>We agreed a friendly and trustworthy design direction was the right way to move forward. Urological problems are uncomfortable and anyway we could ease these feelings was a win for everyone. It might even help push someone over the edge to get the help they needed.</p>
+    </div>
+
+    <div class="project-intro__details">
+        <ul class="list--plain">
+            <li class="bold">Project Info</li>
+            <li>Client: The Conrad Pearson Clinic </li>
+            <li>Agency: Simple Focus</li>
+            <li> Completed: February 2017</li>
+            <li> www.conradpearson.com</li>
+        </ul>
+        <ul class="list--plain">
+            <li class="bold">Services</li>
+            <li>UI Design</li>
+            <li> Web Development</li>
+        </ul>
+    </div>
+
+</section> -->
