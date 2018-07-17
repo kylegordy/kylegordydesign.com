@@ -28,7 +28,7 @@
     color: $black;
 
     &:hover,
-    &:active {
+    &:focus {
         color: $orange;
     }
 
@@ -49,7 +49,7 @@
     padding: 2vw;
 
     &:hover,
-    &:active,
+    &:focus,
     &.active {
         color: $orange;
         border-bottom: none;

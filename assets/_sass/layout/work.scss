@@ -6,14 +6,20 @@
     flex-direction: column;
     justify-content: center;
     min-height: 130px;
+    max-height: 350px;
     height: 25vmin;
+
+    @media screen and (min-width: $bp-s) {
+        min-height: 225px;
+    }
+
 }
 
 .work-intro__title {
     max-width: 15em;
     margin-bottom: 1em;
 
-    @media screen and (max-width: $bp-l){
+    @media screen and (max-width: $bp-l) {
         font-size: 6.1vw;
     }
 
@@ -23,130 +29,157 @@
 ////////////////////
 
 .work-grid {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 900px;
-    margin: 0 0 50px 0;
+    display: block;
+    margin-bottom: 30px;
 
-    @media screen and (min-width: 550px){
-        grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width: $bp-s) {
+        margin-bottom: 50px;
     }
-
 }
 
 .work-grid__card {
-    position: relative;
-    display: block;
-    border: none;
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    max-height: 350px;
+    margin-bottom: 16px;
+    border: 2px solid $gray-light;
     outline: none;
+    overflow: hidden;
+
+    @media screen and (min-width: $bp-s) {
+        margin-bottom: 25px;
+    }
+}
+
+.work-grid__card:hover,
+.work-grid__card:focus {
+    border: 2px solid $orange;
 }
 
 .card__img {
+    align-self: flex-end;
     display: block;
-    width: 100%;
-    border: 2px solid $gray-light;
+    border-top: 1px solid $gray-light;
+    border-right: 1px solid $gray-light;
+    border-top-right-radius: 2px;
+    margin-top: 8%;
+    width: 41%;
+    max-width: 280px;
 }
 
-.card__overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-180deg, rgba(255,255,255,0.90) 3%, #FFFFFF 72%);
-    padding: 15px;
-    border: 8px solid $orange;
-    overflow: hidden; // for overlay number
-    visibility: hidden;
-    opacity: 0;
-    transition: .5s all $ease-in-out-cubic;
-    transition-property: opacity, visibility;
-    z-index: 1;
-
-    @media screen and (min-width: $bp-m){
-        border: 10px solid $orange;
-    }
-
+.card__img.mobile {
+    border: none;
+    border-radius: none;
 }
 
-.work-grid__card:hover .card__overlay,
-.work-grid__card:focus .card__overlay {
-    visibility: visible;
-    opacity: 1;
+.card__txt-group {
+    align-self: center;
+    margin-left: 4%;
+    transition: .4s transform $ease-in-out-cubic;
+    transform: translateX(0);
 }
 
-.overlay__title {
+.work-grid__card:hover .card__txt-group,
+.work-grid__card:focus .card__txt-group {
+    transform: translateX(8px);
+}
+
+.card__title {
     color: $black;
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0 0 -2px 0;
+    font-size: 16px;
+    letter-spacing: -0.35px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+
+    @media screen and (min-width: $bp-s){
+        font-size: calc(16px + 1.2vw);
+    }
 
     @media screen and (min-width: $bp-m){
-        font-size: 22px;
+        font-size: 30px;
     }
 
 }
 
-.overlay__tags {
-    font-size: 14px;
+.card__tags {
+    font-size: calc(12px + .25vw);
     line-height: 1.4;
     margin: 0;
 
     @media screen and (min-width: $bp-s){
+        font-size: calc(12px + .25vw);
+    }
+
+    @media screen and (min-width: $bp-m){
         font-size: 16px;
     }
 
 }
 
-.overlay__title, .overlay__tags {
-    transform: translateX(-15px);
-    transition: .5s transform $ease-in-out-cubic;
-}
+// Card Angle
 
-.work-grid__card:hover .overlay__title,
-.work-grid__card:hover .overlay__tags,
-.work-grid__card:focus .overlay__title,
-.work-grid__card:focus .overlay__tags {
-    transform: translateX(0);
-}
-
-.overlay__number {
+.work-grid__card:before {
+    @extend [data-fade];
+    content: '';
     position: absolute;
-    right: 14px;
-    bottom: -36px;
-    @extend .sans-serif;
-    text-align: right;
-    font-size: 142px;
-    font-weight: 600;
-    line-height: 1;
-    color: $gray-light;
-    z-index: -1;
+    left: 0;
+    bottom: 0;
+    background: url("../img/angles/project-hero-angle-left.svg") no-repeat left bottom / contain;
+    height: 160px;
+    width: 50%;
+    z-index: -2;
+}
 
-    @media screen and (min-width: $bp-m){
-        bottom: -44px;
+// Card Number
+
+.card__number {
+    @extend .sans-serif;
+    display: none;
+
+    @media screen and (min-width: $bp-m) {
+        display: block;
+        position: absolute;
+        right: 14px;
+        bottom: -60px;
+        text-align: right;
         font-size: 180px;
+        font-weight: 600;
+        line-height: 1;
+        color: $gray-light;
+        z-index: -1;
+        letter-spacing: -5px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .4s all $ease-in-out-cubic;
+        transition-property: opacity, visibility, transform;
+        // transform: translatey(20px);
+        transform: scale(.95);
+        transform-origin: bottom;
     }
 
+}
+
+.work-grid__card:hover .card__number, {
+    visibility: visible;
+    opacity: 1;
+    // transform: translatey(0px);
+    transform: scale(1);
 }
 
 // Background angle
 ////////////////////
 
-.work-grid:before {
-    @extend [data-fade];
-    @media screen and (min-width: $bp-l + 300px){
-        content: '';
-        position: absolute;
-        right: 0;
-        padding-top: 35.5vmin;
-        background: url("../img/angles/work-angle.svg") no-repeat right center / cover;
-        height: 1277px;
-        width: 35%;
-        z-index: -2;
-        box-sizing: border-box;
-    }
-}
+// .work-grid:before {
+//     @media screen and (min-width: $bp-l + 300px){
+//         content: '';
+//         position: absolute;
+//         right: 0;
+//         padding-top: 35.5vmin;
+//         background: url("../img/angles/work-angle.svg") no-repeat right center / cover;
+//         height: 1277px;
+//         width: 35%;
+//         z-index: -2;
+//         box-sizing: border-box;
+//     }
+// }

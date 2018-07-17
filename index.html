@@ -11,6 +11,37 @@ body-class: work
 <div class="work-grid">
 
     <a class="work-grid__card" href="{{ site.baseurl }}{% link _work/conrad-pearson.md %}" data-inview data-inview-fade="up" data-transition-delay="1">
+        <img class="card__img" srcset="{{ site.baseurl }}assets/img/thumbs/conrad-thumbnail.jpg,
+                                       {{ site.baseurl }}assets/img/thumbs/conrad-thumbnail@2x.jpg 2x"
+                                  src="{{ site.baseurl }}assets/img/thumbs/conrad-thumbnail.jpg" alt="Conrad Pearson Website" data-inview-fade="up">
+        <div class="card__txt-group">
+            <h3 class="card__title" >Conrad Pearson</h3>
+            <p class="card__tags">UI Design, Front-end Development</p>
+        </div>
+        <span class="card__number">01</span>
+    </a>
+
+    <a class="work-grid__card" href="{{ site.baseurl }}{% link _work/sudo.md %}" data-inview data-inview-fade="up" data-transition-delay="2">
+
+        <img class="card__img mobile" srcset="{{ site.baseurl }}assets/img/thumbs/Sudo-thumbnail.png,
+                                       {{ site.baseurl }}assets/img/thumbs/Sudo-thumbnail@2x.png 2x"
+                                  src="{{ site.baseurl }}assets/img/thumbs/Sudo-thumbnail.png" alt="Sudo iOS App" data-inview-fade="up">
+
+        <div class="card__txt-group">
+            <h3 class="card__title">Sudo</h3>
+            <p class="card__tags">UI Design, Prototyping</p>
+        </div>
+        <span class="card__number">02</span>
+    </a>
+
+
+
+
+
+
+
+<!--
+    <a class="work-grid__card" href="{{ site.baseurl }}{% link _work/conrad-pearson.md %}" data-inview data-inview-fade="up" data-transition-delay="1">
         <div class="card__overlay">
             <span class="overlay__number">01</span>
             <h3 class="overlay__title">Conrad Pearson</h3>
@@ -96,7 +127,7 @@ body-class: work
         <img class="card__img" srcset="http://via.placeholder.com/430x300,
                                        http://via.placeholder.com/860x600 2x"
                                   src="http://via.placeholder.com/430x300" alt="Portfolio Thumbnail Image">
-    </a>
+    </a> -->
 
 </div>
 
