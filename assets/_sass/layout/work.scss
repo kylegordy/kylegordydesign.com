@@ -160,7 +160,8 @@
 
 }
 
-.work-grid__card:hover .card__number, {
+.work-grid__card:hover .card__number,
+.work-grid__card:focus .card__number {
     visibility: visible;
     opacity: 1;
     // transform: translatey(0px);

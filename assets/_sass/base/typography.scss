@@ -2,92 +2,108 @@
 ////////////////////
 
 @font-face {
-    font-family: 'Tofino';
-    src: url('../fonts/Tofino-Regular.woff2') format('woff2'),
-         url('../fonts/Tofino-Regular.woff') format('woff');
+    font-family: "Tofino";
+    src: url("../fonts/Tofino-Regular.woff2") format("woff2"),
+        url("../fonts/Tofino-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Tofino';
-    src: url('../fonts/Tofino-Semibold.woff2') format('woff2'),
-         url('../fonts/Tofino-Semibold.woff') format('woff');
+    font-family: "Tofino";
+    src: url("../fonts/Tofino-Semibold.woff2") format("woff2"),
+        url("../fonts/Tofino-Semibold.woff") format("woff");
     font-weight: 600;
     font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400');
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400");
 
 .serif {
-  font-family: 'Merriweather', Georgia, Times, 'Times New Roman', serif;
+    font-family: "Merriweather", Georgia, Times, "Times New Roman", serif;
 }
 
 .sans-serif {
-  font-family: 'Tofino', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Tofino", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 // Body
 ////////////////////
 
 body {
-  @extend .serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: $black;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    @extend .serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: $black;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-  @media screen and (min-width: $bp-s){
-    font-size: 15px;
-  }
-
+    @media screen and (min-width: $bp-s) {
+        font-size: 15px;
+    }
 }
 
 // Headings
 ////////////////////
 
-h1, h2, h3, h4, h5, h6 {
-  @extend .sans-serif;
-  font-weight: 600;
-  margin: 0 0 .5em 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .sans-serif;
+    font-weight: 600;
+    margin: 0 0 0.5em 0;
 }
 
 h1 {
-  font-size: 28px;
-  line-height: 1.2;
-  margin-bottom: .25em;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
 
-  @media screen and (min-width: $bp-s){
-    font-size: 38px;
-  }
+    @media screen and (min-width: $bp-s) {
+        font-size: 38px;
+    }
 
-  @media screen and (min-width: $bp-m){
-    font-size: 48px;
-    margin-bottom: .15em;
-  }
+    @media screen and (min-width: $bp-m) {
+        font-size: 44px;
+        margin-bottom: 0.15em;
+    }
 
-  @media screen and (min-width: $bp-l){
-    font-size: 58px;
-  }
-
+    @media screen and (min-width: $bp-l) {
+        font-size: 50px;
+    }
 }
 
 h2 {
-  font-size: 28px;
-  line-height: 1.2;
-  margin-bottom: .25em;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
 
-  @media screen and (min-width: $bp-m){
-    font-size: 30px;
-  }
+    @media screen and (min-width: $bp-m) {
+        font-size: 28px;
+    }
 
-  @media screen and (min-width: $bp-l){
-    font-size: 32px;
-  }
+    @media screen and (min-width: $bp-l) {
+        font-size: 30px;
+    }
+}
 
+h3 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
+
+    @media screen and (min-width: $bp-m) {
+        font-size: 22px;
+    }
+
+    @media screen and (min-width: $bp-l) {
+        font-size: 24px;
+    }
 }
 
 // Paragraph
@@ -113,18 +129,21 @@ strong {
 ////////////////////
 
 a {
-  color: $orange;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: .25s all ease-in-out;
-  transition-property: color, border-color;
+    color: $orange;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s all ease-in-out;
+    transition-property: color, border-color;
 }
 
-a:hover { border-color: $orange; }
+a:hover {
+    border-color: $orange;
+}
 
 // List
 ////////////////////
 
-ul, ol {
+ul,
+ol {
     color: $gray-dark;
 }

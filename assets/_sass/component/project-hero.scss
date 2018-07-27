@@ -1,0 +1,142 @@
+$hero-max-height: 800px;
+
+.project-hero-wrapper {
+    position: relative; // to contain background angle
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw; // break outside container
+    margin-right: -50vw; // example https://codepen.io/kjbrum/pen/aEKvbE
+}
+
+.project-hero {
+    @extend .container; // to get container max width and padding
+    display: flex;
+    flex-direction: column-reverse; // flip hero to top
+
+    @media screen and (min-width: $bp-m) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; // align center
+        max-height: $hero-max-height;
+    }
+
+}
+
+.project-hero__header {
+    flex: 0 0 50%;
+    max-width: 500px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $bp-m) {
+        margin-bottom: 0;
+        margin-right: 40px;
+    }
+}
+
+.project-hero__header p {
+    color: $gray-dark;
+
+    @media screen and (min-width: $bp-xl) {
+        font-size: 18px;
+    }
+}
+
+// mobile only header divider
+
+@media screen and (max-width: $bp-m) {
+    .project-hero__header:after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        background-color: $gray-light;
+    }
+}
+
+.project-hero__img {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $bp-m) {
+        margin-bottom: 0;
+        margin-right: -100px;
+        padding-top: 50px;
+    }
+}
+
+.project-hero__img img {
+    border-radius: 2px 2px 0 0;
+    vertical-align: bottom;
+    border: 2px solid $gray-light;
+
+    @media screen and (min-width: $bp-m) {
+        max-height: $hero-max-height - 50px; // same as padding top of parent
+    }
+
+    @media screen and (min-width: $bp-m) {
+        min-height: 100%;
+    }
+}
+
+// Mobile hero overrides
+
+.project-hero.mobile-hero {
+    .project-hero__img {
+        margin-right: 0;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+
+    .project-hero__img img {
+        border: none; // remove border image and radius
+        border-radius: 0;
+        height: 52vw;
+        min-height: 500px;
+        max-height: $hero-max-height - 50px; // same as padding top of parent
+
+        @media screen and (min-width: $bp-m) {
+            margin-right: 0;
+        }
+    }
+}
+
+// Hero angle mobile only
+
+@media screen and (max-width: $bp-m) {
+    .project-hero__img:before {
+        content: "";
+        position: absolute;
+        right: -40px;
+        bottom: -30px;
+        height: 100%;
+        width: 100%;
+        background: url("../img/angles/project-hero-angle.svg") bottom right
+            no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}
+
+// Hero angle medium up
+
+.project-hero:before {
+    @extend [data-inview-fade];
+
+    @media screen and (min-width: $bp-m) {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 70vw;
+        background: url("../img/angles/project-hero-angle.svg") bottom right
+            no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+
+    @media screen and (min-width: $bp-xl) {
+        width: 62vw;
+    }
+}

@@ -1,0 +1,64 @@
+.project-specs {
+    // border: 1px solid red;
+    min-height: 400px;
+
+    @media screen and (min-width: $bp-m) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.project-specs__body {
+    max-width: 500px;
+
+    @media screen and (min-width: $bp-m) {
+        flex: 0 1 auto;
+        margin-right: 30px;
+    }
+
+    @media screen and (min-width: $bp-l) {
+        margin-right: 60px;
+    }
+}
+
+// mobile only header divider
+
+@media screen and (max-width: $bp-m) {
+    .project-specs__body:after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        background-color: $gray-light;
+    }
+}
+
+.project-specs__specs {
+    @media screen and (min-width: $bp-m) {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.project-specs__list:first-of-type {
+    @media screen and (min-width: $bp-m) {
+        margin-right: 30px;
+        padding-left: 30px;
+        border-left: 1px solid $gray-light;
+    }
+    @media screen and (min-width: $bp-l) {
+        margin-right: 60px;
+        padding-left: 60px;
+    }
+}
+
+.project-specs__list {
+    margin-top: 10px;
+}
+
+.project-specs__list li.bold {
+    @extend .sans-serif;
+    font-size: 18px;
+}
