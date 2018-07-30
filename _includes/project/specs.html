@@ -1,0 +1,27 @@
+<div class="project-specs" data-inview data-inview-fade>
+
+    <div class="project-specs__body">
+        <h3>The Challenge</h3>
+        <p>{{ page.project-specs.txt }}</p>
+    </div>
+
+    <div class="project-specs__specs">
+
+        <ul class="project-specs__list list--plain">
+            <li><h4>Project Info</h4></li>
+            {% for item in page.project-specs.project-info %}
+            <li>{{ item }}</li>
+            {% endfor %}
+            {% if page.project-link %}<li><a href="http://{{ page.link }}">{{ page.link }}</a></li>{% endif %}
+        </ul>
+
+        <ul class="project-specs__list list--plain">
+            <li><h4>Services</h4></li>
+            {% for item in page.tags %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</div>

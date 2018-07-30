@@ -1,6 +1,6 @@
 .project-specs {
-    // border: 1px solid red;
     min-height: 400px;
+    margin-bottom: 40px;
 
     @media screen and (min-width: $bp-m) {
         display: flex;
@@ -58,7 +58,7 @@
     margin-top: 10px;
 }
 
-.project-specs__list li.bold {
-    @extend .sans-serif;
+.project-specs__list li h4 {
     font-size: 18px;
+    color: $black;
 }

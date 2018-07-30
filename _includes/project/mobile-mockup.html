@@ -1,0 +1,9 @@
+<div class="mobile-mockup" data-inview data-inview-fade>
+    {% for item in section.images limit:3 %}
+    <div class="mobile-mockup__media">
+        <img srcset="{{ site.baseurl }}/assets/img/project/{{ item.img }},
+                     {{ site.baseurl }}/assets/img/project/{{ item.img | replace:'.','@2x.' }} 2x"
+                src="{{ site.baseurl }}/assets/img/project/{{ item.img }}" alt="{{ item.alt }}">
+    </div>
+    {% endfor %}
+</div>

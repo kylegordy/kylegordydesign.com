@@ -1,0 +1,57 @@
+.project-footer {
+    padding: 50px 0;
+    text-align: center;
+
+    @media screen and (min-width: $bp-m) {
+        padding: 100px 0;
+    }
+}
+
+.project-footer__title {
+    margin-bottom: 25px;
+
+    @media screen and (min-width: $bp-m) {
+        margin-bottom: 40px;
+    }
+}
+
+.project-footer__title a:hover {
+    border-bottom: 2px solid $orange;
+}
+
+.project-footer__ul {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-footer__li {
+    @extend .sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 8px 10px 8px;
+
+    @media screen and (min-width: $bp-m) {
+        font-size: 16px;
+        margin: 0 20px 20px 20px;
+    }
+}
+
+.project-footer__link {
+    color: rgba($black, 0.5);
+    border-bottom: none;
+    transition: 0.4s color $ease-in-out-cubic;
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: $black;
+    }
+}
+
+main.project + .site-footer {
+    margin-top: 0;
+}

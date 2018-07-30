@@ -2,7 +2,7 @@
 layout: contact
 permalink: /contact/
 body-class: contact
-title: contact
+title: Contact
 headline: Let’s talk!
 ---
 

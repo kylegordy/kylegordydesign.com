@@ -1,0 +1,14 @@
+<div class="project-footer" data-inview data-inview-fade>
+
+    <h3 class="project-footer__title">Need help with a project? <a href="{{ site.baseurl }}{% link contact.md %}">Let’s talk!</a></h3>
+
+    <ul class="project-footer__ul list--plain">
+
+        {% assign sorted = site.work | sort: 'order' %}
+        {% for item in sorted %}
+        <li class="project-footer__li"><a class="project-footer__link {% if item.url == page.url %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+
+    </ul>
+
+</div>

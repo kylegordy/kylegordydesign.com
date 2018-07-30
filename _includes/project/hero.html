@@ -1,0 +1,18 @@
+<div class="project-hero-wrapper" data-inview>
+
+    <div {% if page.hero.mobile == true  %} class="project-hero mobile-hero" {% else %} class="project-hero" {% endif %}>
+
+        <header class="project-hero__header" data-inview-fade>
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.hero.txt }}</p>
+        </header>
+
+        <div class="project-hero__img" data-inview-fade="left">
+            <img srcset="{{ site.baseurl }}/assets/img/project/{{ page.hero.img }},
+                         {{ site.baseurl }}/assets/img/project/{{ page.hero.img | replace:'.','@2x.' }} 2x"
+                    src="{{ site.baseurl }}/assets/img/project/{{ page.hero.img }}" alt="{{ page.hero.alt-txt }}">
+        </div>
+
+    </div>
+
+</div>

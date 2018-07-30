@@ -1,0 +1,62 @@
+.desktop-mockup {
+    position: relative; // to contain background angle
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw; // break outside container
+    margin-right: -50vw; // example https://codepen.io/kjbrum/pen/aEKvbE
+    padding-left: $cp-s;
+    padding-right: $cp-s;
+    background-color: rgba($gray-light, 0.5);
+    overflow: hidden;
+
+    @media screen and (min-width: $bp-s) {
+        padding-left: $cp-m;
+        padding-right: $cp-m;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.desktop-mockup__media {
+    z-index: 1;
+    @media screen and (min-width: $bp-s) {
+        max-width: 660px; // firefox srcset flex auto bug fix
+    }
+}
+
+.desktop-mockup__media img {
+    vertical-align: top;
+    max-height: 500px;
+
+    @media screen and (min-width: $bp-s) {
+        max-height: none;
+    }
+}
+
+// Focus Direction (left is default)
+
+.focus-left .desktop-mockup__media:first-of-type img,
+.focus-right .desktop-mockup__media:last-of-type img {
+    margin-top: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.02), 0 0 4px rgba(0, 0, 0, 0.02);
+}
+
+.focus-left .desktop-mockup__media:last-of-type,
+.focus-right .desktop-mockup__media:first-of-type {
+    z-index: 0;
+}
+
+.focus-left .desktop-mockup__media:last-of-type {
+    margin-left: -90px;
+}
+
+.focus-right .desktop-mockup__media:first-of-type {
+    margin-right: -90px;
+}
+
+// remove project link top border if after a desktop mockup
+
+.desktop-mockup + .project-link {
+    border-top: none;
+}

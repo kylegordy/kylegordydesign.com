@@ -41,6 +41,10 @@ $ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 @import "component/experience-list";
 @import "component/project-hero";
 @import "component/project-specs";
+@import "component/mobile-mockup";
+@import "component/desktop-mockup";
+@import "component/project-link";
+@import "component/project-footer";
 
 @import "layout/work";
 @import "layout/about";

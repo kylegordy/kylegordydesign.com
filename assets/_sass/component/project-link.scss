@@ -1,0 +1,19 @@
+.project-link {
+    position: relative; // to contain background angle
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw; // break outside container
+    margin-right: -50vw; // example https://codepen.io/kjbrum/pen/aEKvbE
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px $cp-s;
+    border-top: 2px solid $gray-light;
+    border-bottom: 2px solid $gray-light;
+    text-align: center;
+
+    @media screen and (min-width: $bp-l) {
+        padding: 60px $cp-s;
+    }
+}

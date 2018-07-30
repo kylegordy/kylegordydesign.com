@@ -2,49 +2,16 @@
 layout: default
 ---
 
-<div class="project-hero-wrapper" data-inview>
+{% if page.hero %}
+    {% include project/hero.html %}
+{% endif %}
 
-    <div {% if page.mobile-hero == true  %} class="project-hero mobile-hero" {% else %} class="project-hero" {% endif %}>
+{% if page.project-specs %}
+    {% include project/specs.html %}
+{% endif %}
 
-        <header class="project-hero__header" data-inview-fade="up" data-transition-delay="1">
-            <h1>{{ page.title | escape }}</h1>
-            {{ content }}
-        </header>
+{% for section in page.sections %}
+    {% include project/{{ section.format }}.html %}
+{% endfor %}
 
-        <div class="project-hero__img" data-inview-fade="left">
-            <img srcset="{{ site.baseurl }}/assets/img/project/{{ page.hero-img }},
-                         {{ site.baseurl }}/assets/img/project/{{ page.hero-img | replace:'.','@2x.' }} 2x"
-                    src="{{ site.baseurl }}/assets/img/project/{{ page.hero-img }}" alt="{{ page.hero-alt-txt }}">
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="project-specs">
-
-    <div class="project-specs__body">
-        <h3>The Challenge</h3>
-        <p>Anonyome Labs needed help making their app, Sudo, more visually consistent along with adding some needed features. I spent six months embedded with their internal design and development teams refining their design process and tooling, along with prototyping, testing, and shipping new features.</p>
-    </div>
-
-    <div class="project-specs__specs">
-
-        <ul class="project-specs__list list--plain">
-            <li class="bold">Project Info</li>
-            <li>Client: Anonyome Labs</li>
-            <li>Agency: Simple Focus</li>
-            <li>Completed: February 2017</li>
-            <li><a href="http://sudoapp.com/">www.sudoapp.com</a></li>
-        </ul>
-
-        <ul class="project-specs__list list--plain">
-            <li class="bold">Services</li>
-            <li>UI Design</li>
-            <li> Prototyping</li>
-        </ul>
-
-    </div>
-
-</div>
+{% include project/footer.html %}
