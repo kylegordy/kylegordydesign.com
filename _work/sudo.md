@@ -20,7 +20,7 @@ hero:
   alt-txt: "Sudo iOS Privacy App"
 
 project-specs:
-  txt: "Anonyome Labs needed help making their app, Sudo, more visually consistent along with adding some needed features. I spent six months embedded with their internal design and development teams refining their design process and tooling, along with prototyping, testing, and shipping new features."
+  txt: "Anonyome Labs needed help making their app, Sudo, more visually consistent along with designing some new features. I spent six months embedded with their internal design and development teams refining their design process and tooling, along with prototyping, testing, and shipping new features."
   project-info:
     - "Client: Anonyome Labs"
     - " Agency: Simple Focus "

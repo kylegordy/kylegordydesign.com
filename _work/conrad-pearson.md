@@ -18,7 +18,11 @@ hero:
   alt-txt: "Conrad Pearson urology clinic website"
 
 project-specs:
-  txt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus quis libero id mollis. Proin ultricies sit amet dui eu facilisis. Ut est odio, commodo ut volutpat sed, posuere vitae sapien. Morbi aliquet orci quis sem laoreet sodales. Donec a ultrices nisi. Proin ut purus malesuada, pellentesque lorem nec, rutrum augue."
+  txt: |
+    The Conrad Pearson Clinic needed a new website that was easy to navigate, worked on mobile, and was less clinical feeling. To solve this I designed and built a new site from the ground up.
+
+    The site content was rearchitected to be helpful and easy to find. The tone of the site was shifted to be more friendly and approachable. The imagery was changed to show patients enjoying life post-treatment, and a new more calming color palette was chosen. All of these changes help ease the uncomfortable nature of urological care and hopefully help motivate someone to get the help they need.
+
   project-info:
     - "Client: The Conrad Pearson Clinic"
     - " Agency: Simple Focus"

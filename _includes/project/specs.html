@@ -2,7 +2,7 @@
 
     <div class="project-specs__body">
         <h3>The Challenge</h3>
-        <p>{{ page.project-specs.txt }}</p>
+        {{ page.project-specs.txt | markdownify }}
     </div>
 
     <div class="project-specs__specs">
