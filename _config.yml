@@ -3,16 +3,11 @@ email: kyle@kgordy.com
 description: >-
   I'm a freelance UI designer and front-end web developer working remotely.
 
-# Build settings
+# Build Settings
 markdown: kramdown
-
-# Exclude from processing.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - package.json
-  - gulpfile.js
+sass:
+  sass_dir: assets/_sass
+  style: compressed
 
 # Compress HTML Options
 compress_html:
