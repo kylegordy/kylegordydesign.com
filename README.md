@@ -1,11 +1,11 @@
-This is the source code for my [personal website](http://kgordy.com). It's built with [Jekyll](http://jekyllrb.com) and hosted here using [Github Pages](https://pages.github.com). 
+This is the source code for my [personal website](http://kgordy.com). It's built with [Jekyll](http://jekyllrb.com) and hosted here using [Github Pages](https://pages.github.com).
 
 ## Core Dependencies
 
+* [Ruby](https://www.ruby-lang.org)
 * [Bundler](https://bundler.io/)
-* [Node.js](https://nodejs.org)
 
-## Installation
+## Building
 
 #### Have Bundler resolve the Ruby dependencies.
 
@@ -13,14 +13,8 @@ This is the source code for my [personal website](http://kgordy.com). It's built
 $ bundle install
 ~~~
 
-#### Have NPM resolve the Node.js dependencies.
+#### Run Jekyll to build the website.
 
 ~~~ sh
-$ npm install
-~~~
-
-#### Run Gulp to build the website.
-
-~~~ sh
-$ gulp
+$ bundle exec jekyll serve
 ~~~
