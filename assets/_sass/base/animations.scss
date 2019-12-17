@@ -19,13 +19,6 @@ $animation-duration: .8s;
 .inview[data-inview-fade],
 .inview [data-inview-fade] {
     animation: fade $animation-duration $ease-in-out-cubic forwards;
-
-    // turn off animation if user prefers reduced motion
-    @media (prefers-reduced-motion: reduce) {
-        animation: none;
-        opacity: 1;
-        transform: none;
-    }
 }
 
 [data-fade="up"], [data-inview-fade="up"]  { transform: translate3d(0, $animation-distance, 0); }
@@ -42,5 +35,21 @@ $animation-duration: .8s;
     }
     [data-transition-duration="#{$i}"] {
         animation-duration: $i*.1s !important;
+    }
+}
+
+// Reduced Motion
+////////////////////
+
+// Turn off animations/transitions if user prefers reduced motion
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after,
+    *[data-transition-delay] {
+        animation-duration: 0.001s !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.001s !important;
+        transition-delay: 0s !important;
     }
 }
