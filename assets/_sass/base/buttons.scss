@@ -19,6 +19,11 @@ input[type="button"] {
     cursor: pointer;
     @extend .sans-serif;
 
+    // turn off animation if user prefers reduced motion
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
     &:after {
         content: '';
         width: 8px;
@@ -28,6 +33,11 @@ input[type="button"] {
         border-color: transparent transparent transparent #fff;
         margin-left: 5px;
         transition: .4s transform $ease-in-out-cubic;
+
+        // turn off animation if user prefers reduced motion
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
 
     &:hover:after ,
@@ -38,7 +48,6 @@ input[type="button"] {
     &:hover,
     &:focus {
         background-color: darken( $orange, 4% );
-        outline: none;
     }
 
     &:active {

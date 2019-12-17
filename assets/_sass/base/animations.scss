@@ -19,6 +19,13 @@ $animation-duration: .8s;
 .inview[data-inview-fade],
 .inview [data-inview-fade] {
     animation: fade $animation-duration $ease-in-out-cubic forwards;
+
+    // turn off animation if user prefers reduced motion
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 [data-fade="up"], [data-inview-fade="up"]  { transform: translate3d(0, $animation-distance, 0); }
