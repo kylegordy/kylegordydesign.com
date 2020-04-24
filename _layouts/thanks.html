@@ -8,7 +8,8 @@ layout: default
     <a href="{{ site.baseurl }}{% link contact.md %}" class="btn">send another message</a>
 </section>
 
-<video class="thanks-gif" autoplay loop muted playsinline data-inview data-inview-fade="left">
+<video class="thanks-gif" autoplay loop muted playsinline data-inview data-inview-fade="left" aria-describedby="video-caption">
   <source src="https://media.giphy.com/media/5wWf7GW1AzV6pF3MaVW/giphy.mp4" type="video/mp4">
-  <!--[if lt IE 9]><img src="{{ site.baseurl }}/assets/img/gifs/thanks.gif" alt="A scene from the TV show The Office where Jim and Pam air high-five."><![endif]-->
+  <!--[if lt IE 9]><img src="{{ site.baseurl }}/assets/img/gifs/thanks.gif" alt="A meme from the American TV show The Office, where Jim and Pam look at each other and air high-five."><![endif]-->
+  <div id="video-caption" class="sr-only">A meme from the American TV show The Office, where Jim and Pam look at each other and air high-five.</div>
 </video>
