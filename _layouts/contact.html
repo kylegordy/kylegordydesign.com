@@ -29,7 +29,11 @@ layout: default
 
         <button class="btn" type="submit">Send Message</button>
 
-        <input type="text" name="_gotcha" style="display:none" />
+        <!-- robot test -->
+        <label for="gotcha" style="display:none">Input</label>
+        <input type="text" id="gotcha" name="_gotcha" style="display:none" />
+
+        <!-- additional formspree config -->
         <input type="hidden" name="_format" value="plain" />
         <input type="hidden" name="_next" value="https://kgordy.com{% link thanks.md %}" />
     </form>
